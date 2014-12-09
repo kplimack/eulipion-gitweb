@@ -22,6 +22,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'net-ssh'
   gem.add_dependency 'safe_yaml'
   gem.add_dependency 'thor'
+  gem.add_dependency 'rubocop'
+  gem.add_dependency 'foodcritic'
   gem.add_development_dependency 'pry'
   gem.add_development_dependency 'bundler'
   gem.add_development_dependency 'rake'
@@ -34,6 +36,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'finstyle'
   gem.add_development_dependency 'cane'
-  gem.add_development_dependency 'rubocop'
-  gem.add_development_dependency 'foodcritic'
 end
