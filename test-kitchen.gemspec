@@ -34,4 +34,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'finstyle'
   gem.add_development_dependency 'cane'
+  gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'foodcritic'
 end
