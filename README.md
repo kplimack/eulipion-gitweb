@@ -1,27 +1,11 @@
 # gitweb-cookbook
-
-TODO: Enter the cookbook description here.
+![Travis-Ci](https://travis-ci.org/kplimack/eulipion-gitweb.svg)
+https://travis-ci.org/kplimack/eulipion-gitweb.svg
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
-
-## Attributes
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['gitweb']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+* Debian
+* Ubuntu
 
 ## Usage
 
