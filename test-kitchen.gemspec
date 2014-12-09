@@ -1,12 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'kitchen/version'
 require 'English'
 
 Gem::Specification.new do |gem|
   gem.name = 'gitweb'
-  gem.version = Kitchen::VERSION
+  gem.version = '0.0.1'
   gem.license = 'Apache 2.0'
   gem.authors = ['Jake Plimack']
   gem.email = ['jake.plimack@gmail.com']
