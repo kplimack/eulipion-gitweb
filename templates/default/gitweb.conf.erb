@@ -1,0 +1,9 @@
+# Do not edit by hand. This file is managed by Chef from Cookbook: gitweb
+
+<% @settings.each do |key,val| -%>
+$<%= key %> = <%= val %>;
+<% end -%>
+
+<% @features.each do |key,val| -%>
+$feature{'<%= key %>'}{'default'} = <%= val %>;
+<% end -%>

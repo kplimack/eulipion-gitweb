@@ -1,0 +1,30 @@
+<VirtualHost *:<%= @params[:server_port] || node['apache']['listen_ports'].first %>>
+    ServerName <%= @params[:server_name] %>
+    ServerAlias <% @params[:server_aliases].each do |a| %><%= a %> <% end %>
+
+    DocumentRoot <%= @params[:docroot] %>
+    SetEnv GITWEB_CONFIG  /etc/gitweb.conf
+
+    RewriteEngine on
+    RewriteRule ^/$                                            /gitweb [PT]
+    RewriteRule ^/(.*\.git/(?!/?(HEAD|info|objects|refs)).*)?$ /gitweb%{REQUEST_URI}  [L,PT]
+
+    # Aliases
+    ScriptAlias /gitweb           /usr/lib/cgi-bin/gitweb.cgi
+    Alias       /gitweb.css       /usr/share/gitweb/static/gitweb.css
+    Alias       /gitweb.js       /usr/share/gitweb/static/gitweb.js
+    Alias       /git-logo.png     /usr/share/gitweb/static/git-logo.png
+    Alias       /git-favicon.png  /usr/share/gitweb/static/git-favicon.png
+
+    # Logfiles
+    LogLevel info
+    ErrorLog <%= node['apache']['log_dir'] %>/<%= @params[:name] %>-error.log
+    CustomLog <%= node['apache']['log_dir'] %>/<%= @params[:name] %>-access.log combined
+    RewriteLog <%= node['apache']['log_dir'] %>/<%= @application_name %>-rewrite.log
+    RewriteLogLevel 0
+
+    # Canonical host, <%= @params[:server_name] %>
+    RewriteCond %{HTTP_HOST}   !^<%= @params[:server_name] %> [NC]
+    RewriteCond %{HTTP_HOST}   !^$
+    RewriteRule ^/(.*)$        http://<%= @params[:server_name] %>/$1 [L,R=301]
+</VirtualHost>
