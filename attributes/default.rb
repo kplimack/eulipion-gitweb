@@ -2,7 +2,7 @@
 server_name = "git.#{chef_environment.gsub('_', '')}.#{domain}"
 repo_path = '/data/repos/git'
 
-default['gitweb'] = {
+default[:gitweb] = {
   cookbooks: %w( git ),
   packages: %w( gitweb ),
   repo_path: repo_path,
