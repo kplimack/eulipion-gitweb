@@ -18,3 +18,6 @@ suites:
     run_list:
       - recipe[gitweb]
     attributes:
+      gitweb:
+        server:
+          name: 'git.mydomain.com'

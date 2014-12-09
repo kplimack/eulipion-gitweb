@@ -7,8 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node['gitweb']['cookbooks'].each {|cb| include_recipe cb }
-node['gitweb']['packages'].each {|pkg| package pkg }
+node['gitweb']['cookbooks'].each { |cb| include_recipe cb }
+node['gitweb']['packages'].each { |pkg| package pkg }
 
 directory node[:gitweb][:repo_path] do
   owner node[:gitweb][:user][:name]

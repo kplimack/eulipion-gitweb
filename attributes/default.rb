@@ -21,15 +21,15 @@ default['gitweb'] = {
       # path to git projects (.git)
       projectroot: "'#{repo_path}'",
       # display URLs for cloning
-      #git_base_url_list: [ "git://#{server_name}", "https://#{server_name}" ],
+      # git_base_url_list: [ "git://#{server_name}", "https://#{server_name}" ],
       # directory to use for temp files
       git_temp: '"/tmp"',
-      #site_name: "'#{server_name}'",
+      # site_name: "'#{server_name}'",
       # require export flag
-      #export_ok: '"git-daemon-export-ok"',
-      #strict_export: '1',
+      # export_ok: '"git-daemon-export-ok"',
+      # strict_export: '1',
       # target of the home link on top of all pages
-      #home_link: '$my_uri || "/"',
+      # home_link: '$my_uri || "/"',
       # html text to include at home page
       home_text: '"indextext.html"',
       # file with project list; by default, simply scan the projectroot dir.

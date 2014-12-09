@@ -1,7 +1,6 @@
 require 'serverspec'
 set :backend, :exec
 
-
 describe 'Apache Server' do
 
   it 'is listening on port 80' do
