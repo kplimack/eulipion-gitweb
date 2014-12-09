@@ -24,6 +24,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'thor'
   gem.add_dependency 'rubocop'
   gem.add_dependency 'foodcritic'
+  gem.add_dependency 'cane'
   gem.add_development_dependency 'pry'
   gem.add_development_dependency 'bundler'
   gem.add_development_dependency 'rake'
@@ -35,5 +36,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'maruku'
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'finstyle'
-  gem.add_development_dependency 'cane'
 end
